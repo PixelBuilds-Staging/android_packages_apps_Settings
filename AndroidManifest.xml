@@ -120,6 +120,8 @@
     <uses-permission android:name="android.permission.SEND_SAFETY_CENTER_UPDATE" />
     <uses-permission android:name="android.permission.START_VIEW_APP_FEATURES" />
     <uses-permission android:name="android.permission.CUSTOMIZE_SYSTEM_UI" />
+    <uses-permission android:name="com.google.android.settings.routines.ROUTINES_ACTIONS"/>
+    <permission android:name="com.google.android.settings.routines.ROUTINES_ACTIONS" android:protectionLevel="normal|signature|system"/>
 
     <application
             android:name=".SettingsApplication"
@@ -4575,6 +4577,13 @@
             <intent-filter>
                  <action android:name="settings.intelligence.battery.action.FETCH_BATTERY_USAGE_DATA"/>
                  <action android:name="settings.intelligence.battery.action.FETCH_BLUETOOTH_BATTERY_DATA"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.google.android.settings.routines.RoutinesActionBroadcastReceiver"
+                  android:permission="com.google.android.settings.routines.ROUTINES_ACTIONS" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.settings.routines.RoutinesActionBroadcastReceiver.RINGER_MODE_SILENCE_ACTION"/>
             </intent-filter>
         </receiver>
 
