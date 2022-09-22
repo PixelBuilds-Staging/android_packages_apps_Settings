@@ -70,6 +70,7 @@ public class ScreenLockSettings extends DashboardFragment
             DashboardFragment parent, LockPatternUtils lockPatternUtils) {
 
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
+        controllers.add(new PinScramblePreferenceController(context));
         controllers.add(new PatternVisiblePreferenceController(
                 context, MY_USER_ID, lockPatternUtils));
         controllers.add(new PinPrivacyPreferenceController(
