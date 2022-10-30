@@ -281,7 +281,7 @@
     <string name="config_contextual_card_feedback_email" translatable="false"></string>
 
     <!-- ComponentName to launch a vendor-specific enrollment activity if available -->
-    <string name="config_face_enroll" translatable="false"></string>
+    <string name="config_face_enroll" translatable="false">com.android.settings/com.google.android.settings.biometrics.face.FaceEnrollActivityDirector</string>
 
     <!-- ComponentName to launch a vendor-specific posture guidance activity if available -->
     <string name="config_face_enroll_guidance_page" translatable="false"></string>
@@ -698,4 +698,10 @@
 
     <item name="a11y_extra_dim_banner" type="raw" product="default">@raw/extra_dim_banner</item>
     <item name="a11y_extra_dim_banner" type="raw" product="tablet">@raw/extra_dim_banner_tablet</item>
+
+    <!-- Whether or not to use traffic light enroll -->
+    <bool name="config_face_enroll_use_traffic_light">false</bool>
+
+    <!-- Traffic light package to use -->
+    <string name="config_face_enroll_traffic_light_package"></string>
 </resources>
