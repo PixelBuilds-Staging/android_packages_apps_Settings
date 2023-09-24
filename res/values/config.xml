@@ -758,8 +758,8 @@
     <integer-array name="datausage_hiding_carrier_service_carrier_id" translatable="false"/>
 
     <!-- Whether or not to use traffic light enroll -->
-    <bool name="config_face_enroll_use_traffic_light">false</bool>
+    <bool name="config_face_enroll_use_traffic_light">true</bool>
 
     <!-- Traffic light package to use -->
-    <string name="config_face_enroll_traffic_light_package"></string>
+    <string name="config_face_enroll_traffic_light_package">com.google.android.settings.future.biometrics.faceenroll</string>
 </resources>
